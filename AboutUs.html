@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="css/lightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+  
+
+<style>
+
+    p {font-size: 17px;}
+    /*---------------------------------------------About Us-------------------*/
+
+    .panel-body{
+        color: #030303;
+    }
+
+    .panel-heading{
+        background-color: #ffcc00;
+    }
+
+    .panel:hover { 
+        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    }
+
+    /*-------------------------------Animation------------------------------------*/
+
+    /*.slideanim {visibility:hidden;}*/
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+  /*--------------------------------------Navbar-----------------------------------*/
+  .navbar {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 14px;
+    letter-spacing: 5px;
+    background-color:#ffcc00;
+    opacity: 0.8;
+
+  }
+  
+  .navbar-nav  li a:hover {
+    color:grey !important;
+  }
+  li{
+    padding-top:3px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+/*-----------------------------------BG-IMAGE-----------------------------------*/
+
+.bg-image img {
+
+  /* Add the blur effect 
+  filter: blur(0.5px);
+  -webkit-filter: blur(0.5px);
+
+  background-blend-mode:soft-light;*/
+  filter: brightness(60%);
+}
+
+.center1 {
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: fantasy;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  color: white;
+}
+
+.center2 {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: cursive;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  color: white;
+}
+
+.center3 {
+  position: absolute;
+  top: 50%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-family: fantasy;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+  color: white;
+}
+
+.viewmore{
+  position:absolute;
+  top: 90%;
+  left: 10% ;
+}
+
+.bg-image h4{
+  color: white;
+}
+
+.bg-image span{
+  margin-left: 34px;
+}
+
+.left1{
+  position:absolute;
+  top: 25%;
+  left: 5% ;
+  font-size: 20px;
+  color: white;
+}
+
+.left2{
+  position:absolute;
+  top: 30%;
+  left: 5% ;
+  font-size: 60px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.left3{
+  position:absolute;
+  top: 40%;
+  left: 5% ;
+  font-family: cursive;
+  font-size: 20px;
+  color: white;
+}
+
+.left4{
+  position:absolute;
+  top: 43%;
+  left: 5% ;
+  font-family: cursive;
+  font-size: 20px;
+  color: white;
+}
+
+/*---------------------------second tow--------------------------------------*/
+.column {
+  float: left;
+  width: 50%;
+  /*padding: 10px;*/
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+</style>
+</head>
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top"> 
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>                     
+        </button>
+        <img class="navbar-brand img-circle" style="block-size:60px; padding-top: 0px; padding-bottom: 5px; margin-left: 0px;" src="image\logo.png"><p style="float:right;padding-top: 16px; color: black; ">ASDAY Designers</p>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="homepage.html" style="color: black;">HOME</a></li>
+          <li><a href="#reviews" style="color: black;">REVIEWS</a></li>
+          <li><a href="Portfolio.html" target="_self" style="color: black;">PORTFOLIO</a></li>
+          <li><a href="#services"  style="color: black;">SERVICES</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal" style="color: black;">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--section one-->
+  <div class="bg-image" style="height: 100vh;">
+    <img src="team3.jpg" width="100%" height="100%">
+    <!--div class="center1">Design </div>
+    <div class="center2">can change the</div>
+    <div class="center3">world</div-->
+    <div class="viewmore">
+      <a href="#team" title="View More">
+        <h4>View More</h4>
+        <span class="glyphicon glyphicon-chevron-down" style="color: white;"> </span>
+      </a>
+    </div>
+    <div class="left1">Based In</div>
+    <div class="left2">Pune</div>
+    <div class="left3">You Dream it,</div>
+    <div class="left4">We do it.</div>
+  </div>
+
+  <!--section two-->
+  <div>
+    
+    
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="css/lightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 17px;}
+
+  .margin {margin-bottom: 45px;
+            
+  }
+
+  .bg-1 { 
+    background-color: #ffffff; 
+    color: black;
+  }
+  .bg-2 { 
+    background-color:#e6e6e6; 
+    color:black;
+  }
+  .bg-3 { 
+    background-color: #ffffff;
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f;
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 14px;
+    letter-spacing: 5px;
+    background-color:#ffcc00;
+    opacity: 0.8;
+
+  }
+
+  
+  .navbar-nav  li a:hover {
+    color:grey !important;
+  }
+  li{
+    padding-top:3px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+}
+
+  
+
+  /*---------------Contact Modal CSS------------------*/
+
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: black;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
+  }
+
+  @media screen and (max-width: 600px){
+    .contact-form{
+      flex-direction: column;
+    }
+    .msg textarea{
+      height: 50px;
+    }
+    .input-fields,
+    .msg{
+      width: 50%;
+    }
+  }
+
+  .required-field::before {
+  content: "*";
+  color: red;
+  float: right;
+  }
+
+
+
+  /*-------------------------Icons--------------------------*/
+.s-m{
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.s-m a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #a4a6a8;
+  color: white;
+  margin: 0 6px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 22px;
+}
+.s-m a:hover{
+  background: #030303;
+}
+.s-m a i{
+  transition: 0.4s all;
+}
+.s-m a:hover > i{
+  transform: scale(1.6) rotate(25deg);
+}
+
+/*---------------------------------Carousel Text-------------------*/
+
+.header-text {
+    position: absolute;
+    top: 30%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+
+.header-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 0.1rem 0.1rem 0.8rem black;
+}
+
+.header-text h1 span {
+  
+	padding: 10px;
+}
+
+.header-text h3 span {
+	
+  padding: 15px;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+}
+
+.carousel-inner{
+  width:100%;
+  max-height: 1200px !important;
+}
+
+
+/*-----------------------Footer------------------------------------*/
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+
+/*-----------------------Services------------------------*/
+#services h4, h2{
+  color:#ffcc00;
+}
+
+#services h4{
+  font-style: italic;
+  font-family: cursive;
+}
+
+#services{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    transition: 1s;
+  }
+
+  .thumbnail img:hover{
+    transform: scale(1.1);
+     }
+
+  </style>
+</head>
+<body id="myPage" >
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top"> 
+  <div class="container">
+    <div class="navbar-header " >
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>                     
+      </button>
+      <img class="navbar-brand img-circle" style="block-size:60px; padding-top: 0px; padding-bottom: 5px; " src="image\logo.png"><p style="float:right;padding-top: 10px; color: black; ">ASDAY Designers</p>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about" style="color: black;">ABOUT</a></li>
+        <li><a href="Portfolio.html" style="color: black;">PORTFOLIO</a></li>
+        <li><a href="#services" target="_self" style="color: black;">SERVICES</a></li>
+        <li><a href="#reviews"  style="color: black;">REVIEWS</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal" style="color: black;">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- First Container -->
+<div class="container"  style="padding-top: 90px; padding-bottom: 30px; width: 100%; " >
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="image\background1.jpg" alt="image 0" style="width:100%;">
+        <!--div class="header-text hidden-xs">
+          <div class="col-md-12 text-center ">
+            <h1 >
+              <span>Welcome to <strong>ASDAY</strong></span>
+            </h1>
+            <h3>
+                <span>"Your Dream, Our Design"</span>
+            </h3>
+          </div>
+        </div-->
+      </div>
+
+      <div class="item">
+        <img src="image\background2.jpg" alt="image 1" style="width:100%;">
+        <!--div class="header-text hidden-xs">
+          <div class="col-md-12 text-center">
+            <h1>
+              <span>Welcome to <strong>ASDAY</strong></span>
+            </h1>
+            <h3>
+                <span>"Your Dream, Our Design"</span>
+            </h3>
+          </div>
+        </div-->
+      </div>
+    
+      <div class="item">
+        <img src="image\background3.jpg" alt="image 2" style="width:100%;">
+        <!--div class="header-text hidden-xs">
+          <div class="col-md-12 text-center">
+            <h1>
+              <span>Welcome to <strong>ASDAY</strong></span>
+            </h1>
+            <h3>
+                <span>"Your Dream, Our Design"</span>
+            </h3>
+          </div>
+        </div-->
+      </div>
+
+      <div class="item">
+        <img src="image\background4.jpg" alt="image 3" style="width:100%;">
+        <!--div class="header-text hidden-xs">
+          <div class="col-md-12 text-center">
+            <h1>
+              <span>Welcome to <strong>ASDAY</strong></span>
+            </h1>
+            <h3>
+                <span>"Your Dream, Our Design"</span>
+            </h3>
+          </div>
+        </div-->
+      </div>
+
+      <div class="item">
+        <img src="image\background5.jpg" alt="image 4" style="width:100%;">
+        <!--div class="header-text hidden-xs">
+          <div class="col-md-12 text-center">
+            <h1>
+              <span>Welcome to <strong>ASDAY</strong></span>
+            </h1>
+            <h3>
+                <span>"Your Dream, Our Design"</span>
+            </h3>
+          </div>
+        </div-->
+      </div>
+    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Second Container (About company) Part 1-->
+<div id="about" class="container-fluid" style="padding-top: 40px; background-color:white; padding-bottom: 40px; align-content: center;">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2 style="color: #ffdb4d;">About Company Page</h2><br>
+      <h4 style="color: black;">DATA to be entered---------------------------------------------------------.</h4><br>
+      <p style="color: black; ">DATA to be entered------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.</p>
+      <br>
+    </div>
+    <div class="col-sm-4">
+      <img src="image/company1.jpg" style="width: 400px; height: 400px;"/>
+    </div>
+  </div>
+</div>
+
+<!--  Second Container (About company) Part 2-->
+<div class="container-fluid bg-grey" style="padding-top: 40px; padding-bottom: 40px; background-color: #f2f2f2;">
+  <div class="row">
+    <div class="col-sm-4" style="align-content: center;">
+      <img src="image/values1.png" style="width: 300px; height: 350px;"/>
+    </div>
+    <div class="col-sm-8" >
+      <h2>Our Values</h2>
+      <h4 style="color: #ffcc00;">What we think?</h4><br>
+      <h4 style="color: black;"><p style="letter-spacing:2px; font-size: 20px;">
+        <b>"Interior Design </b>
+            is making the best possible use of the 
+        <b> available space "</b></p><br>
+      <p style="color: black; letter-spacing: 2px; font-size: 15px; line-height: 2;">                  
+          We believe that the spaces we inhabit should be beautiful, functional, and playful. 
+To achieve this we work meticulously, considering our projects from every angle, through to the smallest detail. 
+          We also believe that good relationships are the key to successful projects, 
+  and we pride ourselves on building a strong sense of trust and understanding with our clients.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Sixth container (Services Section)  -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Bathroom Remodeling</strong></h4>
+        <a href="image/bathroom-remodeling.jpg" data-lightbox="myservices" data-title="Give your bathroom a new look, by remodeling. Internal Affairs, a leading interior designing firm in Kolkata offers renovation service at affordable prices."><img src="image/bathroom-remodeling.jpg" alt="Bathroom" width="400px" height="300px"></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Electrical</strong></h4>
+        <a href="image/electrical.jpg" data-lightbox="myservices" data-title="Electricians install and maintain electrical power, communications, lighting, and control systems in homes, businesses, and factories."><img src="image/electrical.jpg" alt="Paris" width="400" height="300" ></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Fabrication</strong></h4>
+        <a href="image/fabrication.jpg" data-lightbox="myservices" data-title="fgsjdgfdshfhsdgfhdsj"><img src="image/fabrication.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>False Ceiling</strong></h4>
+        <a href="image/fasle-ceiling.jpg" data-lightbox="myservices" data-title="The earthy tones. This false ceiling is ideal for modern bedrooms and created with concrete and paint. The designers have opted to go for geometric shapes and designs and create a wonderful design. So when you look above, you see clean shapes, a neat design and some warm and earthy tones."><img src="image/fasle-ceiling.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Flooring & Wall Tiling</strong></h4>
+        <a href="image/flooring-wallTiling.jpg" data-lightbox="myservices" data-title="Ideas for flooring and walls - a creative tool for home use Today, the walls and floors act as a canvas for modern art. Whether on the floor or wall surface is covered and transformed into a work of art. The tiles are verifiable end components in interior design, some unique designs in unusual colors."><img src="image/flooring-wallTiling.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Furnishing</strong></h4>
+        <a href="image/furnishing.jpg" data-lightbox="myservices" data-title="mvdgdfygeryfdufad xjhgsduyfs"><img src="image/furnishing.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Furnitures</strong></h4>
+        <a href="image/furnitures.png" data-lightbox="myservices" data-title="dfsdgf dshfgdfisd"><img src="image/furnitures.png" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Painting/Deco/Polish</strong></h4>
+        <a href="image/painting-deco-polish.jpg" data-lightbox="myservices" data-title="Forget making it the last step, we'll show you why wall art matters most as you go about designing the rooms of your home."><img src="image/painting-deco-polish.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Plumbing</strong></h4>
+        <a href="image/plumbing.jpg" data-lightbox="myservices" data-title="This system covers a wide range of areas. A plumber provides sanitary plumbing which includes hot and cold water reticulation, flush systems, gas supply, fire prevention systems, roof flashings, downpipes, and the internal installation of sanitary fixtures like WCs, basins, faucets and many more."><img src="image/plumbing.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Wallpaper</strong></h4>
+        <a href="image/wallpaper.jpg" data-lightbox="myservices" data-title="Wallpaper printing techniques include surface printing, gravure printing, silk screen-printing, rotary printing, and digital printing."><img src="image/wallpaper.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Wall Treatment</strong></h4>
+        <a href="image/walltreatment.jpg" data-lightbox="myservices" data-title="vxjcv fugydfig dfugydfgy"><img src="image/walltreatment.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h4><strong>Wood Work</strong></h4>
+        <a href="image/woodwork.jpg" data-lightbox="myservices" data-title="Woodworkers set up, operate, and tend all types of woodworking machines, such as saws, milling machines, drill presses, lathes, shapers, routers, sanders, planers, and wood-fastening machines. Operators set up the equipment, cut and shape wooden parts, and verify dimensions, using a template, caliper, and rule."><img src="image/woodwork.jpg" alt="Paris" width="400" height="300"></a>
+      </div>
+  </div>
+</div>
+
+
+<br><br>
+<!-- fourth Container (customer Reviews)-->
+<p id="reviews"></p><br><br>
+  <div id="myCarousel1" class="carousel slide text-center" data-ride="carousel" style="background-color: #f2f2f2; padding-bottom: 10px;  height: fit-content;">
+    <h2 style="padding-top: 15px;">What our customers say</h2><br>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel1" data-slide-to="1"></li>
+      <li data-target="#myCarousel1" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox" style="padding-bottom: 40px;">
+      <div class="item active">
+        <h4 style="color: black;"><i>"This company is the best. I am so happy with the result!"</i><br><br><span>EFGH, gfydsgfdhsdh, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4 style="color: black;"><i>"One word... WOW!!"</i><br><br><span>ABCD, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4 style="color: black;"><i>"Could I... BE any more happy with this company?"</i><br><br><span>TYUI, Actor, hgdfgdfy</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!--contact popup-->
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog" style="margin-top: 30px; ">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content" style="width: 70%; padding-left: 2%; margin-right: auto; opacity: 0.9; border-radius: 20px; background: linear-gradient(to bottom, #ffffff 55%, #ffcc00 94%);">
+        <button type="button" class="close" data-dismiss="modal" style="padding-right: 3%; padding-top: 3%;">&times;</button><br>
+        <div class="modal-body">
+            <!----Social Media Icons-->
+              <div class="s-m">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a> 
+              </div>
+
+              <!--User Feedback form-->
+              <form action="action.php" class="form-horizontal">
+                <h1 style="color: black; text-align: center; padding-bottom: 5px;">Get In Touch</h1>
+                <p style="color: black; font-size: 13px; text-align: center; padding-bottom: 20px;">Contact us and We will get back to you within 2 business days.</p>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label class="required-field" for="usr" style="font-size: 15px; color: black;" >Name</label>
+                    <input type="text" class="form-control" id="usr" placeholder="Full Name" pattern="^[a-zA-Z ]{2,30}$" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label class="required-field" for="inputEmail4" style="font-size: 15px; color: black; margin-left: 18%;">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" style="margin-left: 45px;" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label class="required-field" for="phone" style="font-size: 15px; color: black;">Phone Number</label>
+                    <input class="form-control" type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="^[1-9]{1}[0-9]{9}$" required>
+                  </div> 
+                  <div class="form-group col-md-6">
+                    <label class="required-field" for="message" style="font-size: 15px; color: black; margin-left: 18%;">Express</label>
+                    <textarea class="form-control" rows="1" id="message" name="message" placeholder="Your views" style="margin-left: 45px;" required></textarea>
+                  </div>
+                </div>
+                  <button type="submit" class="btn btn-warning">Send</button>
+                  <button class="btn btn-warning" data-dismiss="modal">Close</button>
+              </form><br><br>
+                
+              <!--Company Information-->
+              <div class="container" style="margin-left: 8%;">
+                <p style="color: black;"><span class="glyphicon glyphicon-map-marker"></span><b>Address:</b>&nbsp;&nbsp;&nbsp;&nbsp;Pune, Maharashtra, India<br></p>  
+                <p style="color: black;"><span class="glyphicon glyphicon-phone"></span><b>Phone:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9923319065 / 9766450635<br>
+                <p style="color: black;"><span class="glyphicon glyphicon-envelope"></span><b>Email:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;asdaydesigners@gmail.com
+                </p>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+<!-- Footer -->
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+<script>
+  $(document).ready(function(){
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+      if (this.hash !== "") {
+  
+        event.preventDefault();
+  
+        var hash = this.hash;
+  
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+     
+          window.location.hash = hash;
+        });
+      } 
+    });
+    
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+  
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+      });
+    });
+  })
+
+
+    window.addEventListener("load",function (){
+
+      const loader = document.querySelector(".loader");
+      
+      loader.className += " hidden";
+
+    });
+  
+
+  </script>
+   
+
+
+
+
+</body>
+</html>
+
+

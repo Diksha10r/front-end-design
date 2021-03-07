@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body{
+    background: url("contact_page1.jpg") no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .heading{
+
+      font-size: 40px;
+      color: rgb(255, 255, 255);
+      font-family: Segoe UI;
+      position: absolute;
+      bottom:250px;
+      top:30px;
+      left:35%;
+      text-align: center;
+      margin-right: 10%;
+      margin-bottom: 150px;
+      line-height: 30px;
+      letter-spacing: 2px;
+  
+
+  }
+  .wrapper{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 500px;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .wrapper .title h1{
+    color: #c5ecfd;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .contact-form{
+    display: flex;
+  }
+  
+  .input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+  }
+  
+  .input-fields,
+  .msg{
+    width: 48%;
+  }
+  
+  .input-fields .input,
+  .msg textarea{
+    margin: 10px 10;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid #c5ecfd;
+    padding: 10px;
+    color: #c5ecfd;
+    width: 70%;
+  }
+  
+  .msg textarea{
+    height: 100px;
+  }
+  
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #c5ecfd;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #c5ecfd;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #c5ecfd;
+  }
+  
+  .btn {
+      background: #39b7dd;
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px){
+    .contact-form{
+      flex-direction: column;
+    }
+    .msg textarea{
+      height: 50px;
+    }
+    .input-fields,
+    .msg{
+      width: 50%;
+    }
+  }
+  .container{
+    /*background: rgba(0,0,0,0.3)
+    text-align: center;
+    padding-top: 555px;*/
+    
+    color: #c5ecfd;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 500px;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #635f60;
+    color: white;
+    text-align: center;
+  }
+/*-------------------------Icons--------------------------*/
+.s-m{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.s-m a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #a4a6a8;
+  color: white;
+  margin: 0 6px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 22px;
+}
+.s-m a:hover{
+  background: #030303;
+}
+.s-m a i{
+  transition: 0.4s all;
+}
+.s-m a:hover > i{
+  transform: scale(1.6) rotate(25deg);
+}
+/*-----------------------------------------------MENU-------------------------------------------------------------*/
+.menu-wrap{
+    position: fixed;
+    top: 0px;
+    right: 50px;
+  }
+  
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+   z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    
+  }
+  
+  .menu-wrap .hamburger{
+    position: absolute;
+    top:0px;
+    right: 20px;
+    
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    
+  }
+  
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+    
+  }
+  
+  /* Moves Line Down */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+  
+  /* Turns Lines Into X */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  /* Rotate On Hover When Checked */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+  
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+    
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition:  opacity 0.3s ease 0.3s;
+    
+  }
+  
+  .menu-wrap .menu {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    height: 85%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    background-color: rgba(133, 133, 127, 0.801);
+    border-radius: 20px;
+    
+
+  }
+  
+  .menu-wrap .menu > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    
+    transform: scale(0);
+    transition: all 0.3s ease;
+    
+  }
+  
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+    
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: rgb(6, 5, 7);
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+   
+  }
+  .menu-wrap .menu > div > div > ul > li > a:hover{
+      color: crimson;
+      
+  }
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+  }
+  

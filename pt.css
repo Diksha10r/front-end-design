@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body{
+   background-color: black;
+  }
+.header{
+    margin: 3%;
+}
+.header h2,p
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    color:rgb(187, 182, 182);
+    text-align: center;
+    
+}
+.single-album{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px #000;
+    border-radius: 50px;
+    background-color: rgba(192, 192, 192, 0.582);
+    
+    width: 100%;
+
+  
+    
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.col-md-3{
+     
+    border-radius: 50px;
+    float: left;
+  width: 40%;
+  padding: 5px;
+    
+}
+.album-img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+    
+}
+.album-img img{
+    width:100%;
+    transition: .4s;
+}
+.single-album:hover .album-img img{
+    transform: scale(1.3,1.3);
+}
+
+
+.album-content
+{
+    height: 15%;
+    width: 50%;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    left: auto;
+    transition: all .4s;
+    background: #0e0d0da8;
+    border-radius: 20px;
+
+
+}
+.single-album:hover .album-content
+{
+    height: 150px;
+}
+.album-info
+{
+    transition: a11 .5s;
+    padding:5px 20px 5px 20px;
+}
+.album-info h3{
+    font-size: 16px;
+    color: #fff;
+    margin: 5px;
+    text-transform: uppercase;
+
+}
+.single-album:hover .album-info h3
+{
+    color:tomato;
+}
+.album-info p{
+    color: #fff;
+    margin-top: 15px;
+
+}
+.single-album:hover .album-info p{
+  color: tomato;
+}
+.album-text{
+    color: #fff;
+    padding: 0 10px 5px;
+    font-size: 13px;
+}

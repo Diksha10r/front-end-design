@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+
+font-family: 'Lato', sans-serif;
+body{
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: #505962;
+}
+
+/*--Navigation--*/
+.navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    background: rgba(0,0,0,0.6)!important;
+}
+.navbar-brand img{
+    height: 2rem;
+}
+.navbar-nav li{
+    padding-right: 0.7rem;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color:white;
+    padding-top: 0.8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+    color:#1ebba3
+}
+
+/*---Landing Page--**/
+.home-inner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../Images/background.jpg");
+    
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.caption{
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top:38%;
+    z-index: 1;
+    color: #e5ebea;
+    text-transform: uppercase;
+    
+}
+.caption h1{
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-shadow: 0.1rem 0.1rem 0.8rem black;
+    padding-bottom: 1rem;
+}
+.caption h3{
+    font-size: 2rem;
+    text-shadow: 0.1rem 0.1rem 0.5rem black;
+    padding-bottom: 1.6rem;
+
+}
+.abt h3{
+    font-size: 2rem;
+    
+    padding-bottom: 1.6rem;
+}
+.col-sm-4 img{
+    size: 0.5rem;
+    border-radius: 50%;
+}
+/*
+.btn-lg{
+    border-width:medium;
+    border-radius:0;
+    padding:0.6rem 1.3rem;
+    font-size:1.1rem;
+}
+
+*/
+/*==========About====*/
+/* 4 columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  #about{
+      background-color: rgb(141, 121, 125);
+  }
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: black
+    
+  }
+  .container h2,p{
+    color: white;
+}
+  .card:hover{
+      color: rgb(222, 167, 135);
+  }
+  .card img{
+      border-radius: 50%;
+      height: 20rem;
+      width: 20rem;
+  }
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 0 16px;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: cadetblue;
+    font-weight: 700;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color:black;
+    background-color: burlywood;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  #contact.container-fluid{
+      background-color: black;
+  }
+
+
+
+
+
+  .jumbotron {
+    background-color: #948a87;
+    color: #fff;
+    padding: 100px 25px;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+
+  #services{
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../Images/proj2.jpg) ;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+  }
+   
+#services h2,h4{
+  color: aqua;
+}
+  #gallery{
+    background-image: url(../Images/contact_page1.jpg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .btn{
+    border-width:medium;
+    border-radius:20%;
+    padding:0.6rem 1.3rem;
+    font-size:1.1rem;
+    color: brown;
+    font-weight: bold;
+}
+.quote{
+    left: 10rem;
+    color: rgb(0, 0, 0);
+}
+
+/*============= COURSE SECTION =============*/
+
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
